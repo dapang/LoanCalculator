@@ -536,7 +536,7 @@
                 repayMonth = [self getSumMonthRepay:foundRate putTotal:foundVal putMonth:totalMonth putCurMonth:i] + [self getSumMonthRepay:bizRate putTotal:bizVal putMonth:totalMonth putCurMonth:i];
                 repayTotal += repayMonth;
                 
-                [_caculatorModel.resultPerMonthRepay addObject:[[[[NSString stringWithFormat:@"%d",(i+1)] stringByAppendingString:@"月"] stringByAppendingFormat:@"%.2f",repayMonth] stringByAppendingString:@"元"]];
+                [_caculatorModel.resultPerMonthRepay addObject:[[[[NSString stringWithFormat:@"%d",(i+1)] stringByAppendingString:@"月 - "] stringByAppendingFormat:@"%.2f",repayMonth] stringByAppendingString:@"元"]];
             }
             
             repayAccrual = repayTotal - totalVal;
@@ -591,7 +591,7 @@
                     repayMonth = [self getSumMonthRepay:currentRate putTotal:totalVal putMonth:totalMonth putCurMonth:i];
                     repayTotal += repayMonth;
                     
-                    [_caculatorModel.resultPerMonthRepay addObject:[[[[NSString stringWithFormat:@"%d",(i+1)] stringByAppendingString:@"月"] stringByAppendingFormat:@"%.2f",repayMonth] stringByAppendingString:@"元"]];
+                    [_caculatorModel.resultPerMonthRepay addObject:[[[[NSString stringWithFormat:@"%d",(i+1)] stringByAppendingString:@"月 - "] stringByAppendingFormat:@"%.2f",repayMonth] stringByAppendingString:@"元"]];
                 }
                 
                 repayAccrual = repayTotal - totalVal;
@@ -628,7 +628,7 @@
                     repayMonth = [self getSumMonthRepay:currentRate putTotal:totalLoan putMonth:totalMonth putCurMonth:i];
                     repayTotal += repayMonth;
                     
-                    [_caculatorModel.resultPerMonthRepay addObject:[[[[NSString stringWithFormat:@"%d",(i+1)] stringByAppendingString:@"月"] stringByAppendingFormat:@"%.2f",repayMonth] stringByAppendingString:@"元"]];
+                    [_caculatorModel.resultPerMonthRepay addObject:[[[[NSString stringWithFormat:@"%d",(i+1)] stringByAppendingString:@"月 - "] stringByAppendingFormat:@"%.2f",repayMonth] stringByAppendingString:@"元"]];
                 }
                 
                 repayAccrual = repayTotal - totalLoan;
