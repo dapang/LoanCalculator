@@ -28,6 +28,7 @@
 {
     [super viewDidLoad];
     
+    self.navigationItem.title = @"计算结果";
     UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:self action:@selector(backAction:)];
     self.navigationItem.leftBarButtonItem = backButton;
     [backButton release];

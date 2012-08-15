@@ -32,31 +32,38 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:self action:@selector(backAction)];
-    self.navigationItem.leftBarButtonItem = backButton;  
-    [backButton release];  
     
     _caculatorModel = [LCCaculatorModel instance];
     
     switch (_whichOption) {
         case 0:
+            self.navigationItem.title = @"还款方式";
             _currentData = [[NSArray alloc] initWithArray:_caculatorModel.optionsRepayType];
             break;
         case 1:
+            self.navigationItem.title = @"贷款类别";
             _currentData = [[NSArray alloc] initWithArray:_caculatorModel.optionsLoanType];
             break;
         case 2:
+            self.navigationItem.title = @"计算方式";
             _currentData = [[NSArray alloc] initWithArray:_caculatorModel.optionsCaculateType];
             break;
         case 3:
+            self.navigationItem.title = @"按揭成数";
             _currentData = [[NSArray alloc] initWithArray:_caculatorModel.optionsMortgagepercent];
             break;
         case 4:
+            self.navigationItem.title = @"按揭年数";
             _currentData = [[NSArray alloc] initWithArray:_caculatorModel.optionsMortgageyears];
             break;
         default:
             break;
     }
+    
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:self action:@selector(backAction)];
+    self.navigationItem.leftBarButtonItem = backButton;  
+    [backButton release];  
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
