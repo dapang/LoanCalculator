@@ -42,7 +42,7 @@
     [super viewDidLoad];
     
     self.navigationItem.title = @"房屋贷款计算器";
-    [self.navigationItem setHidesBackButton:YES];
+    
     UIBarButtonItem *caculateButton = [[UIBarButtonItem alloc] initWithTitle:@"计算" style:UIBarButtonItemStyleBordered target:self action:@selector(caculateAction:)];
     self.navigationItem.rightBarButtonItem = caculateButton;
     [caculateButton release];
