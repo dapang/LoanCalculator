@@ -18,7 +18,7 @@
 
 @interface LCMainViewController (Private)
 
-- (BOOL)isPureInt:(NSString*)string;
+- (BOOL)isPureInt:(NSString *)string;
 - (void)textFieldInput:(UITextField *)textField;
 - (void)caculateAction:(UIBarButtonItem *)button;
 - (float)getSumMonthRepay:(float)rate putTotal:(int)total putMonth:(int)month putCurMonth:(int)curMonth;
