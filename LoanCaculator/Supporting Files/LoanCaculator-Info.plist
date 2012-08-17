@@ -8,13 +8,15 @@
 	<string>贷款计算器</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIdentifier</key>
-	<string>com.xu01.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleIconFiles</key>
 	<array>
 		<string>icon.png</string>
 		<string>icon@2x.png</string>
 	</array>
+	<key>UIPrerenderedIcon</key>
+	<false/>
+	<key>CFBundleIdentifier</key>
+	<string>com.xu01.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -36,8 +38,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>
