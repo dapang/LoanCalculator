@@ -33,12 +33,21 @@
     self.navigationItem.leftBarButtonItem = backButton;
     [backButton release];
     
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 416)];
+    if ([[UIScreen mainScreen] bounds].size.height == 568) {
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 504)];
+    } else {
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 416)];
+    }
     
     [self.view addSubview:_scrollView];
     [_scrollView release];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStyleGrouped];
+    if ([[UIScreen mainScreen] bounds].size.height == 568) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 504) style:UITableViewStyleGrouped];
+    } else {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStyleGrouped];
+
+    }
     _tableView.delegate = self;
     _tableView.dataSource = self;
     

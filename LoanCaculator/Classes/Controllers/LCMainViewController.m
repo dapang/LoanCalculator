@@ -46,13 +46,19 @@
     self.navigationItem.rightBarButtonItem = caculateButton;
     [caculateButton release];
     
+    if ([[UIScreen mainScreen] bounds].size.height == 568) {
+        isIphone5 = true;
+    }else{
+        isIphone5 = false;
+    }
+    
     _caculatorModel = [LCCaculatorModel instance];
     
-    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 416)];
+    _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, 320, 504)];
     [self.view addSubview:_scrollView];
     [_scrollView release];
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStyleGrouped];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 504) style:UITableViewStyleGrouped];
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.sectionHeaderHeight = 0;
@@ -314,7 +320,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{    
+{
     [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
     
     switch (indexPath.section) {
@@ -385,7 +391,9 @@
     
     switch (textField.tag) {
         case 21:
-            [_scrollView setContentOffset:CGPointMake(0, 50) animated:YES];
+            if (!isIphone5) {
+                [_scrollView setContentOffset:CGPointMake(0, 50) animated:YES];
+            }
             break;
         default:
             break;
@@ -398,7 +406,9 @@
     
     switch (textField.tag) {
         case 21:
-            [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+            if (!isIphone5) {
+                [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+            }
             break;
         default:
             break;
@@ -411,7 +421,9 @@
     
     switch (textField.tag) {
         case 21:
-            [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+            if (!isIphone5) {
+                [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+            }
             break;
         default:
             break;
@@ -465,6 +477,8 @@
 //计算
 - (void)caculateAction:(UIBarButtonItem *)button
 {
+    [_scrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    
     //定义局部变量
     int bizVal; //商业贷款
     int foundVal; //公积金

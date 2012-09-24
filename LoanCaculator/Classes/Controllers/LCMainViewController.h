@@ -18,6 +18,8 @@
     UITableView *_tableView;
     
     LCCaculatorModel *_caculatorModel;
+    
+    BOOL isIphone5;
 }
 
 @end

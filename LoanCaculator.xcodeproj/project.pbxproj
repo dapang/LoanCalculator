@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C702090F15D0BC3900C6E7D2 /* LCCaculatorModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C702090E15D0BC3900C6E7D2 /* LCCaculatorModel.m */; };
+		C702330B1606B55800AEF968 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C702330A1606B55800AEF968 /* Default-568h@2x.png */; };
 		C73390F515D4049100D5F464 /* LCResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C73390F315D4049100D5F464 /* LCResultViewController.m */; };
 		C766F34115DB929B006729EE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C766F33D15DB929B006729EE /* Default.png */; };
 		C766F34215DB929B006729EE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C766F33E15DB929B006729EE /* Default@2x.png */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		C702090D15D0BC3900C6E7D2 /* LCCaculatorModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCCaculatorModel.h; sourceTree = "<group>"; };
 		C702090E15D0BC3900C6E7D2 /* LCCaculatorModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCCaculatorModel.m; sourceTree = "<group>"; };
+		C702330A1606B55800AEF968 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		C73390F215D4049100D5F464 /* LCResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCResultViewController.h; sourceTree = "<group>"; };
 		C73390F315D4049100D5F464 /* LCResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCResultViewController.m; sourceTree = "<group>"; };
 		C766F33D15DB929B006729EE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		C7F4F49515CF543100D96FCA /* images */ = {
 			isa = PBXGroup;
 			children = (
+				C702330A1606B55800AEF968 /* Default-568h@2x.png */,
 				C7F4717115DDCCE00079F96A /* icon.png */,
 				C7F4717215DDCCE00079F96A /* icon@2x.png */,
 				C766F33D15DB929B006729EE /* Default.png */,
@@ -242,6 +245,7 @@
 				C766F34215DB929B006729EE /* Default@2x.png in Resources */,
 				C7F4717315DDCCE00079F96A /* icon.png in Resources */,
 				C7F4717415DDCCE00079F96A /* icon@2x.png in Resources */,
+				C702330B1606B55800AEF968 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,7 +289,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PROVISIONING_PROFILE = "985B9D14-EFC0-4A8F-9F80-513EB34AABB7";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -305,7 +308,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				PROVISIONING_PROFILE = "985B9D14-EFC0-4A8F-9F80-513EB34AABB7";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = NO;
 				VALIDATE_PRODUCT = YES;

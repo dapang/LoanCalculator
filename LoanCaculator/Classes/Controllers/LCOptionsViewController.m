@@ -65,9 +65,15 @@
     self.navigationItem.leftBarButtonItem = backButton;  
     [backButton release];  
     
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStyleGrouped];
+    if ([[UIScreen mainScreen] bounds].size.height == 568) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 504) style:UITableViewStyleGrouped];
+    }else{
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 320, 416) style:UITableViewStyleGrouped];
+    }
+    
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _tableView.scrollEnabled = true;
     
     [self.view addSubview:_tableView];
     [_tableView release];
@@ -222,7 +228,7 @@
 - (void)dealloc
 {
     [_currentData release];
-    
+    self.currentSelect = nil;
     [super dealloc];
 }
 
