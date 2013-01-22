@@ -6,6 +6,7 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
+//头类
 #import <Foundation/Foundation.h>
 
 @interface LCCaculatorModel : NSObject
